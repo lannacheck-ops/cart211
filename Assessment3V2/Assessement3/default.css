@@ -1,0 +1,141 @@
+body {
+    font-family: Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255, 251, 245);
+
+}
+
+#wrapper {
+    margin-top: 0px;
+    float: right;
+    width: 60%;
+    margin-right: 50px;
+
+}
+
+
+header h1 {
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 5px;
+
+
+}
+
+header h2 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: 20px;
+    color: darkgoldenrod;
+
+}
+
+header h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+    color: darkgoldenrod;
+
+}
+
+header img {
+    margin-top: 50px;
+    width: 100%;
+}
+
+nav {
+
+    margin-top: 50px;
+    margin-left: 50px;
+    float: left;
+    width: 15%;
+    line-height: 30px;
+    position: fixed;
+}
+
+nav a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: darkgoldenrod;
+    font-size: 25px;
+}
+
+section {
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+article p:last-child {
+    margin-bottom: 80px;
+}
+
+
+article h3 {
+    margin-bottom: 10px;
+    color: darkgoldenrod;
+}
+
+footer {
+    margin-top: 20px;
+    min-height: 30px;
+    font-size: 15px;
+    font-weight: normal;
+    text-align: right;
+    font-style: italic;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.books {
+    display: grid;
+
+    grid-template-columns: auto auto auto;
+    max-width: 100%;
+    gap: 16px;
+
+}
+
+.books img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+
+
+}
+
+.books img:hover {
+    scale: 120%;
+    border-image-width: 3px;
+
+}
+
+.books>div {
+    text-align: center;
+    padding: 10px;
+}
+
+.books figure {
+    margin: 0;
+}
+
+article figure figcaption {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+
+table img {
+    max-width: 100%;
+    max-height: 100%;
+}
