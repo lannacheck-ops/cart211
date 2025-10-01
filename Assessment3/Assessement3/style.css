@@ -14,9 +14,12 @@ a {
 nav {
     margin-left: 50px;
     margin-top: 50px;
+    width: 30%;
+    float: left;
 }
 
 .wrapper {
     width: 60%;
     float: right;
+    margin-top: 50px;
 }
