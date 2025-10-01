@@ -32,3 +32,8 @@ header img {
 h1 {
     text-align: right;
 }
+
+footer {
+    margin-top: 50px;
+    text-align: right;
+}
