@@ -262,6 +262,7 @@ footer a {
     border-radius: 10px;
     color: white;
     transition: opacity 0.3s ease;
+    /* Transition for the images*/
 }
 
 .books figure:hover .hover-text {
