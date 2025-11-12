@@ -2,33 +2,50 @@ body {
     font-family: "Special Elite", system-ui;
     font-weight: 400;
     font-style: normal;
-    background: #fafafa;
-    color: #333;
+    background-color: #0e1117;
+    color: #e2e8f0;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+h1 {
+    color: #90cdf4;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
 }
 
 .app {
-    font-size: 16px;
-    max-width: 500px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    background: #1a202c;
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
+/* Folder styles */
 .folder {
-    margin-left: 1rem;
+    margin-left: 0.8rem;
+    border-left: 1px solid #2d3748;
+    padding-left: 0.8rem;
 }
 
 .folder-header {
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 4px 0;
+    gap: 0.4rem;
+    font-size: 15px;
+    color: #e2e8f0;
+    user-select: none;
+    padding: 3px 0;
     transition: color 0.2s ease;
 }
 
 .folder-header:hover {
-    color: #0078ff;
+    color: #63b3ed;
 }
 
 .folder-icon {
@@ -36,14 +53,90 @@ body {
 }
 
 .folder-children {
-    margin-left: 1.2rem;
-    border-left: 1px dashed #ccc;
-    padding-left: 0.8rem;
+    overflow: hidden;
+    margin-left: 1rem;
 }
 
+/* File styles */
 .file {
-    margin-left: 1.2rem;
+    margin-left: 1.4rem;
     padding: 2px 0;
-    color: #666;
-    font-style: italic;
+    color: #a0aec0;
+    font-family: "Fira Code", monospace;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.file:hover {
+    color: #90cdf4;
+}
+
+/* Arrow animation */
+.arrow {
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.folder-header.open .arrow {
+    transform: rotate(90deg);
+}
+
+.board {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.connections {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.connections line {
+    stroke: #d62828;
+    stroke-width: 2.5px;
+    stroke-linecap: round;
+    stroke-dasharray: 2000;
+    /* for animation */
+    stroke-dashoffset: 2000;
+    animation: draw-line 0.7s linear forwards;
+    cursor: pointer;
+    pointer-events: all;
+    /* allow clicks for deletion */
+    transition: stroke-width 0.2s;
+}
+
+.connections line:hover {
+    stroke-width: 4px;
+    stroke: #b10e0e;
+}
+
+@keyframes draw-line {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.note {
+    position: absolute;
+    border: 3px solid #fff;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transform: rotate(-3deg);
+    cursor: pointer;
+}
+
+.note img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.note.active {
+    outline: 3px solid #d62828;
+    outline-offset: 3px;
 }
