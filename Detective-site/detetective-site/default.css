@@ -2,83 +2,95 @@ body {
     font-family: "Special Elite", system-ui;
     font-weight: 400;
     font-style: normal;
-    background-color: #0e1117;
     color: #e2e8f0;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url('assets/thick-old-paper.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
 }
 
-h1 {
-    color: #90cdf4;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
+.container {
+    position: relative;
+    text-align: center;
 }
 
-.app {
-    width: 100%;
-    max-width: 600px;
-    background: #1a202c;
-    border-radius: 12px;
-    padding: 1rem 1.2rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-/* Folder styles */
-.folder {
-    margin-left: 0.8rem;
-    border-left: 1px solid #2d3748;
-    padding-left: 0.8rem;
-}
-
-.folder-header {
+/* Closed folder image */
+#folder {
+    width: 400px;
+    transition: transform 0.3s ease, filter 0.3s ease;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 15px;
-    color: #e2e8f0;
-    user-select: none;
-    padding: 3px 0;
-    transition: color 0.2s ease;
 }
 
-.folder-header:hover {
-    color: #63b3ed;
+#folder:hover {
+    transform: scale(1.08);
+    filter: brightness(1.1);
 }
 
-.folder-icon {
-    font-size: 18px;
+/* Hidden open folder */
+.hidden {
+    display: none;
 }
 
-.folder-children {
-    overflow: hidden;
-    margin-left: 1rem;
+/* Open folder view */
+#open-folder {
+    position: relative;
 }
 
-/* File styles */
-.file {
-    margin-left: 1.4rem;
-    padding: 2px 0;
-    color: #a0aec0;
-    font-family: "Fira Code", monospace;
+.open-folder-bg {
+    width: 700px;
+    display: block;
+}
+
+/* White paper on top of open folder */
+.paper {
+    position: absolute;
+    top: 120px;
+    left: 180px;
+    width: 340px;
+    height: 420px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: left;
+    border-radius: 4px;
+}
+
+.paper h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+}
+
+.paper p {
     font-size: 14px;
-    transition: color 0.2s ease;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 40px;
 }
 
-.file:hover {
-    color: #90cdf4;
+/* Start button */
+#start-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    padding: 10px 16px;
+    background: #d62828;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
 }
 
-/* Arrow animation */
-.arrow {
-    transition: transform 0.2s ease;
-    display: inline-block;
-}
-
-.folder-header.open .arrow {
-    transform: rotate(90deg);
+#start-btn:hover {
+    background: #b91c1c;
 }
 
 .board {

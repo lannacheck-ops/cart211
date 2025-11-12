@@ -40,72 +40,28 @@
 
     </header>
     <h1>Case File Surveillance Capitalism</h1>
-    <div id="react-root"></div>
+    <div class="container">
+        <!-- Closed folder -->
+        <img id="folder" src="assets/closed-folder.png" alt="Closed folder" />
 
-    <!-- React + Babel -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!-- Open folder view -->
+        <div id="open-folder" class="hidden">
+            <img src="assets/open-folder.png" alt="Open folder" class="open-folder-bg" />
 
-    <!-- Component Code -->
-    <script type="text/babel">
-        const { useState } = React;
+            <div class="paper">
+                <h2>Terms and Conditions</h2>
+                <p>
+                    By proceeding, you agree to participate in this interactive experience.
+                    You understand that this is a fictional investigation created for storytelling
+                    and entertainment purposes only.
+                </p>
 
-        // Individual folder
-        function Folder({ name, children }) {
-            const [isOpen, setIsOpen] = useState(false);
+                <button id="start-btn">Start the Investigation</button>
+            </div>
+        </div>
+    </div>
 
-            return (
-                <div className="folder">
-                    <div
-                        className={`folder-header ${isOpen ? "open" : ""}`}
-                        onClick={() => setIsOpen((prev) => !prev)}
-                    >
-                        <span className="arrow">{isOpen ? "▼" : "▶"}</span>
-                        <span className="folder-icon">{isOpen ? "📂" : "📁"}</span>
-                        <span className="folder-name">{name}</span>
-                    </div>
-
-                    <div
-                        className="folder-children"
-                        style={{
-                            maxHeight: isOpen ? "500px" : "0",
-                            opacity: isOpen ? 1 : 0,
-                            transition: "all 0.35s ease",
-                        }}
-                    >
-                        {children}
-                    </div>
-                </div>
-            );
-        }
-
-        // Example folder tree
-        function App() {
-            return (
-                <div className="app">
-                    <Folder name="src">
-                        <Folder name="components">
-                            <div className="file">Header.jsx</div>
-                            <div className="file">Footer.jsx</div>
-                            <div className="file">Sidebar.jsx</div>
-                        </Folder>
-                        <Folder name="assets">
-                            <div className="file">logo.svg</div>
-                            <div className="file">background.jpg</div>
-                        </Folder>
-                        <Folder name="utils">
-                            <div className="file">helpers.js</div>
-                        </Folder>
-                        <div className="file">main.jsx</div>
-                    </Folder>
-                </div>
-            );
-        }
-
-        const root = ReactDOM.createRoot(document.getElementById("react-root"));
-        root.render(<App />);
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
