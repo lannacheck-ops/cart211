@@ -34,169 +34,67 @@
         <header>
             <!--Navigation-->
             <nav>
-
-                <div class="logo"> <a href="index.html"><img src="assets/logo.png" alt="Logo" width="110px"
-                            height="50px">
-                    </a>
-                </div>
-
-
-                <div class="menu1">
-                    <button class="close-menu">&times;</button>
-                    <a href="story1.html" class="menuI">STORIES</a><br>
-                    <a href="#" class="menuI">SERIES</a><br>
-                    <a href="index.html" class="menuI_active">ABOUT</a>
-                </div>
-
-                <!--Hamburger menu button for mobile version-->
-                <div class="hamburger-menu">
-                    <button>
-                        <span class="fa fa-bars"></span>
-                    </button>
-
-                </div>
-
+                <a href="index.html">Home</a>
+                <a href="#">Bio</a>
+                <a href="#">Work</a>
             </nav>
 
         </header>
         <section>
             <article>
                 <h1>Case File Surveillance Capitalism</h1>
+                <div id="react-root"></div>
 
-                <p>
-                    Humans of New York began as Brandon Stanton photography project in 2010. The initial goal was to
-                    photograph 10,000 New
-                    Yorkers on the street, and create an exhaustive catalogue of the city’s inhabitants.
-                </p>
+                <!-- React and Babel via CDN -->
+                <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+                <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+                <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-                <p>
-                    Taken together, these portraits and captions became the subject of a vibrant blog. HONY now has over
-                    twenty million
-                    followers on social media, and provides a worldwide audience with daily glimpses into the lives of
-                    strangers on the
-                    streets of New York City.
-                </p>
+                <!-- React Component -->
+                <script type="text/babel">
+                    const { useState } = React;
 
-                <div class="books">
+                    function Folder({ name, children }) {
+                        const [isOpen, setIsOpen] = useState(false);
 
-                    <figure class="im1"><a href="story1.html">
-                            <img src="assets/america_pageant.jpg" class="im" alt="america pageant" loading="lazy"></a>
-                        <div class="hover-text"> america pageant</div>
-                    </figure>
+                        return (
+                            <div className="folder">
+                                <div
+                                    className="folder-header"
+                                    onClick={() => setIsOpen((prev) => !prev)}
+                                >
+                                    <span className="folder-icon">{isOpen ? "📂" : "📁"}</span>
+                                    <span className="folder-name">{name}</span>
+                                </div>
 
-                    <figure class="im2">
-                        <img src="assets/Chipwich_guy.jpg" class="im" alt="Chipwich guy" loading="lazy">
-                        <div class="hover-text">Chipwich guy</div>
-                    </figure>
+                                {isOpen && <div className="folder-children">{children}</div>}
+                            </div>
+                        );
+                    }
 
-                    <figure class="im3">
-                        <img src="assets/end_of_life_patient.jpg" class="im" alt="end of life patient" loading="lazy">
-                        <div class="hover-text">end of life patient
-                        </div>
-                    </figure>
+                    // Example nested folders
+                    function App() {
+                        return (
+                            <div className="app">
+                                <Folder name="src">
+                                    <Folder name="components">
+                                        <div className="file">Header.jsx</div>
+                                        <div className="file">Footer.jsx</div>
+                                    </Folder>
+                                    <Folder name="assets">
+                                        <div className="file">logo.png</div>
+                                        <div className="file">background.jpg</div>
+                                    </Folder>
+                                    <div className="file">main.jsx</div>
+                                    <div className="file">index.html</div>
+                                </Folder>
+                            </div>
+                        );
+                    }
 
-                    <figure class="im4">
-                        <img src="assets/exhausting_to_me.jpg" class="im" alt="exhausting to me" loading="lazy">
-                        <div class="hover-text">exhausting to me
-                        </div>
-                    </figure>
-
-                    <figure class="im5">
-                        <img src="assets/fake_sport.jpg" class="im" alt="fake sport" loading="lazy">
-                        <div class="hover-text">fake sport
-                        </div>
-                    </figure>
-
-                    <figure class="im6">
-                        <img src="assets/gettin_married.jpg" class="im" alt="gettin married" loading="lazy">
-                        <div class="hover-text">gettin married
-                        </div>
-                    </figure>
-
-                    <figure class="im7">
-                        <img src="assets/homework.jpg" class="im" alt="homework" loading="lazy">
-                        <div class="hover-text">homework
-                        </div>
-                    </figure>
-
-                    <figure class="im8">
-                        <img src="assets/invisibility.jpg" class="im" alt="invisibility" loading="lazy">
-                        <div class="hover-text">invisibility
-                        </div>
-                    </figure>
-
-                    <figure class="im9">
-                        <img src="assets/Mardi-Gras.jpg" class="im" alt="Mardi-Gras" loading="lazy">
-                        <div class="hover-text">Mardi-Gras
-                        </div>
-                    </figure>
-
-                    <figure class="im10">
-                        <img src="assets/Right_and_wrong.jpg" class="im" alt="Right and wrong" loading="lazy">
-                        <div class="hover-text">Right and wrong
-                        </div>
-                    </figure>
-
-                    <figure class="im11">
-                        <img src="assets/sketchbook.jpg" class="im" alt="sketchbook" loading="lazy">
-                        <div class="hover-text">sketchbook
-                        </div>
-                    </figure>
-
-                    <figure class="im12">
-                        <img src="assets/the_algorithm.jpg" class="im" alt="the algorithm" loading="lazy">
-                        <div class="hover-text">the algorithm
-                        </div>
-                    </figure>
-                </div>
-
-            </article>
-        </section>
-
-
-        <!--Footer-->
-        <footer>
-            <div class="social">
-
-                <!--Social Media Icons-->
-                <div class="icons-wrapper">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-pinterest"></a>
-                    <a href="#" class="fa fa-snapchat-ghost"></a>
-
-
-                </div>
-            </div>
-
-            <div class="credit">
-                <small><em>This website was created as a part of a student project. All content and design are
-                        copyright
-                        Lanna Check, 2025</em></small>
-            </div>
-        </footer>
-
-
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburgerButton = document.querySelector('.hamburger-menu button');
-            const closeButton = document.querySelector('.close-menu');
-            const menu1 = document.querySelector('.menu1');
-
-            // Opens the menu
-            hamburgerButton.addEventListener('click', () => {
-                menu1.classList.add('menu-deployed');
-            });
-
-            // Closes the menu
-            closeButton.addEventListener('click', () => {
-                menu1.classList.remove('menu-deployed');
-            });
-        });
-    </script>
+                    const root = ReactDOM.createRoot(document.getElementById("react-root"));
+                    root.render(<App />);
+                </script>
 </body>
 
 </html>
