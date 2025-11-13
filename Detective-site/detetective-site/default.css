@@ -7,11 +7,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('assets/thick-old-paper.jpg');
+    background-image: url('assets/detective-desk.png');
+    /* Path to your image */
     background-size: cover;
+    /* Makes the image cover the whole page */
     background-repeat: no-repeat;
+    /* Prevents the image from repeating */
     background-position: center;
+    /* Centers the image */
     height: 100vh;
+    /* Ensures the body takes full viewport height */
     margin: 0;
 }
 
@@ -22,8 +27,13 @@ body {
 
 /* Closed folder image */
 #folder {
-    width: 400px;
+    position: absolute;
+    top: 100px;
+    right: 150px;
+    width: 700px;
+    transform: rotate(3deg);
     transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
     cursor: pointer;
 }
 
@@ -43,17 +53,17 @@ body {
 }
 
 .open-folder-bg {
-    width: 700px;
+    width: 900px;
     display: block;
 }
 
 /* White paper on top of open folder */
 .paper {
     position: absolute;
-    top: 120px;
-    left: 180px;
-    width: 340px;
-    height: 420px;
+    top: 40px;
+    left: 240px;
+    width: 380px;
+    height: 480px;
     background: white;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     padding: 20px;
