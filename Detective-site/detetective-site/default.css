@@ -64,7 +64,7 @@ body {
 }
 
 .open-folder-bg {
-    width: 1200px;
+    width: 950px;
     display: block;
 }
 
@@ -76,11 +76,11 @@ body {
     transform: translate(-50%, -50%);
 
     width: 55%;
-    background: white;
+    background: rgb(243, 237, 234);
     height: 80%;
     padding: 20px;
     border-radius: 4px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .red-highlight {
@@ -100,9 +100,13 @@ body {
 }
 
 .paper p {
-    font-size: 100%;
-    color: #444;
-    line-height: 2.5;
+    font-family: "IBM Plex Mono",
+        monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 94%;
+    color: #000000;
+    line-height: 1.7;
     margin: 20px;
 }
 
