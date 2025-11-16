@@ -7,17 +7,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.with-bg {
     background-image: url('assets/detective-desk.png');
-    /* Path to your image */
     background-size: cover;
-    /* Makes the image cover the whole page */
     background-repeat: no-repeat;
-    /* Prevents the image from repeating */
     background-position: center;
-    /* Centers the image */
-    height: 100vh;
-    /* Ensures the body takes full viewport height */
-    margin: 0;
+    background-attachment: fixed;
+}
+
+.board-bg {
+    background-image: url('assets/board-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .container {
@@ -52,36 +57,53 @@ body {
     position: relative;
 }
 
+.folder-container {
+    position: relative;
+    display: inline-block;
+    /* container shrinks to fit folder */
+}
+
 .open-folder-bg {
-    width: 900px;
+    width: 1200px;
     display: block;
 }
 
 /* White paper on top of open folder */
 .paper {
     position: absolute;
-    top: 40px;
-    left: 240px;
-    width: 380px;
-    height: 480px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 55%;
     background: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    height: 80%;
     padding: 20px;
-    text-align: left;
     border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.red-highlight {
+    color: #d23b3b;
+    font-weight: 600;
+}
+
+.green-highlight {
+    color: #4a5a5e;
+    font-weight: 600;
 }
 
 .paper h2 {
     text-align: center;
-    margin-top: 0;
+    margin-top: 10;
     color: #333;
 }
 
 .paper p {
-    font-size: 14px;
+    font-size: 100%;
     color: #444;
-    line-height: 1.5;
-    margin-bottom: 40px;
+    line-height: 2.5;
+    margin: 20px;
 }
 
 /* Start button */
@@ -152,8 +174,8 @@ body {
 }
 
 .note img {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: auto;
     object-fit: cover;
     display: block;
 }

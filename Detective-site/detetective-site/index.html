@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
+<body class="with-bg">
     <header>
         <!--Navigation-->
         <nav>
@@ -39,28 +39,33 @@
         </nav>
 
     </header>
-    <h1>Case File Surveillance Capitalism</h1>
     <div class="container">
         <!-- Closed folder -->
         <img id="folder" src="assets/closed-folder.png" alt="Closed folder" />
 
         <!-- Open folder view -->
         <div id="open-folder" class="hidden">
-            <img src="assets/open-folder.png" alt="Open folder" class="open-folder-bg" />
 
-            <div class="paper">
-                <h2>Terms and Conditions</h2>
-                <p>
-                    You will be tasked to solve the cold case of surveillance capitalism. FInd clues to uncover the true
-                    motive of companies sucking out users data under the pretense of improving user experience.
-                </p>
+            <div class="folder-container">
+                <img src="assets/open-folder.png" alt="Open folder" class="open-folder-bg" />
 
-                <button id="start-btn">Start the Investigation</button>
+                <div class="paper">
+                    <h2>Case File Surveillance Capitalism</h2>
+                    <p>
+                        You’re a detective investigating a mysterious fictive company,
+                        <span class="green-highlight">OmniCore</span>, whose Terms & Conditions
+                        seem… off. You will be tasked to find clues to uncover the true
+                        motive of company by paying close attention to each
+                        <span class="red-highlight">word</span>.
+                    </p>
+
+                    <button id="start-btn">Start the Investigation</button>
+                </div>
+
             </div>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+        </div>
+        <script src="script.js"></script>
 </body>
 
 </html>
