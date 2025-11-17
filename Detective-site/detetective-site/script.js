@@ -1,4 +1,5 @@
 // 🗂️ FOLDER PAGE CODE
+// Folder page code
 const folder = document.getElementById("folder");
 const openFolder = document.getElementById("open-folder");
 
@@ -9,10 +10,10 @@ if (folder && openFolder) {
     });
 
     const startBtn = document.getElementById("start-btn");
+
     if (startBtn) {
         startBtn.addEventListener("click", () => {
-            alert("Investigation started!");
-            // window.location.href = "corkboard.html";
+            window.location.href = "agreement.html";
         });
     }
 }
