@@ -74,7 +74,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     width: 55%;
     background: rgb(243, 237, 234);
     height: 80%;
@@ -129,18 +128,54 @@ body {
     background: #b91c1c;
 }
 
-.agreement {
+/*.agreement {
     position: relative;
     text-align: center;
-}
+}*/
 
-.agreement img {
+#agreement {
     margin-top: 30px;
     width: 600px;
     height: auto;
     object-fit: cover;
     display: block;
     cursor: pointer;
+    transform: rotate(10deg);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#agreement:hover {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+}
+
+#TAC {
+    position: relative;
+}
+
+.TAC-paper {
+    position: fixed;
+    margin-top: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    background: rgb(243, 237, 234);
+    height: 80%;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.TAC-paper p {
+    font-family: "IBM Plex Mono",
+        monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 94%;
+    color: #000000;
+    line-height: 1.7;
+    margin: 20px;
 }
 
 .board {

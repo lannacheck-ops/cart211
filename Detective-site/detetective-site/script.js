@@ -1,5 +1,4 @@
-// 🗂️ FOLDER PAGE CODE
-// Folder page code
+// FOLDER PAGE CODE
 const folder = document.getElementById("folder");
 const openFolder = document.getElementById("open-folder");
 
@@ -18,7 +17,7 @@ if (folder && openFolder) {
     }
 }
 
-// 📌 CORKBOARD PAGE CODE
+// CORKBOARD PAGE CODE
 const svg = document.querySelector(".connections");
 const notes = document.querySelectorAll(".note");
 
@@ -63,5 +62,16 @@ if (svg && notes.length > 0) {
                 firstSelected = null;
             }
         });
+    });
+}
+
+// AGREEMENT PAGE CODE
+const agreement = document.getElementById("agreement");
+const TAC = document.getElementById("TAC");
+
+if (agreement && TAC) {
+    agreement.addEventListener("click", () => {
+        agreement.style.display = "none";
+        TAC.classList.remove("hidden");
     });
 }
