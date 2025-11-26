@@ -29,11 +29,23 @@ body {
     background-attachment: fixed;
 }
 
+/* Span class for text*/
+.red-highlight {
+    color: #d23b3b;
+    font-weight: 600;
+}
+
+.green-highlight {
+    color: #4a5a5e;
+    font-weight: 600;
+}
+
 .container {
     position: relative;
     text-align: center;
 }
 
+/* INDEX PAGE*/
 /* Closed folder image */
 #folder {
     position: absolute;
@@ -72,7 +84,7 @@ body {
     display: block;
 }
 
-/* White paper on top of open folder */
+/* White paper on top of the open folder */
 .paper {
     position: absolute;
     top: 50%;
@@ -84,16 +96,6 @@ body {
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.red-highlight {
-    color: #d23b3b;
-    font-weight: 600;
-}
-
-.green-highlight {
-    color: #4a5a5e;
-    font-weight: 600;
 }
 
 .paper h2 {
@@ -132,6 +134,44 @@ body {
     background: #b91c1c;
 }
 
+/* REPORT AFTER EACH INVESTIGATION */
+/* REPORT ID */
+#TAC-report {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+/* REPORT PAPER PARAGRAPH */
+.TAC-paper-report p {
+    font-size: 94%;
+    line-height: 1.7;
+    margin: 20px;
+}
+
+.TAC-paper-report h2 {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* REPORT BACKGROUND PAPER */
+.TAC-paper-report {
+    min-width: 50%;
+    background: rgb(243, 237, 234);
+    min-height: 80%;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+
+/* AGREEMENT PAGE*/
 #agreement {
     margin-top: 30px;
     width: 600px;
@@ -190,7 +230,7 @@ body {
     display: inline-block;
 }
 
-/* Hover state: bigger (zoom) and slightly less blur */
+/* Hover state: bigger and slightly less blur */
 .euphemisms:hover {
     transform: scale(1.2);
     filter: blur(1px);
@@ -220,34 +260,7 @@ body {
     display: block;
 }
 
-#TAC-report {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
-    color: #000000;
-    display: flex;
-    justify-content: center;
-}
 
-.TAC-paper-report p {
-    font-size: 94%;
-    line-height: 1.7;
-    margin: 20px;
-}
-
-.TAC-paper-report {
-    width: 60%;
-    background: rgb(243, 237, 234);
-    min-height: 80%;
-    /* longer than screen */
-    padding: 40px;
-    border-radius: 4px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    margin: auto;
-    /* centers inside flex container */
-}
 
 /* Proceed agreement button*/
 #proceed-agreement {
@@ -268,7 +281,16 @@ body {
     background: #b91c1c;
 }
 
-/* entire layout */
+/* DATA PAGE */
+.info p {
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #e2e8f0;
+    margin: 10px;
+    font-size: 25px;
+}
+
 #data-page {
     display: flex;
     justify-content: space-between;
@@ -278,7 +300,7 @@ body {
     padding: 0 4vw;
 }
 
-/* 2x2 draggable grid */
+/* 2x2 ICON DRAGGABLE GRID */
 .icon-grid {
     display: grid;
     margin-left: 50px;
@@ -298,7 +320,7 @@ body {
     filter: brightness(1.1);
 }
 
-/* machine drop zone */
+/* MACHINE */
 .machine-container {
     position: relative;
 }
@@ -326,7 +348,7 @@ body {
     /* Let the bubble size itself based on content */
     max-width: 180px;
     text-align: center;
-
+    /* ANIMATE THE BUBBLES TO MAKE IT LOOK LIKE ITS FLOATING LIKE SMOKE FROM THE MACHINE */
     animation: float 4s ease-in-out infinite alternate;
 }
 
@@ -349,6 +371,7 @@ body {
     }
 }
 
+/* PROCEED DATA PAGE BTN*/
 #proceed-btn2 {
     position: fixed;
     bottom: 10px;
@@ -366,7 +389,7 @@ body {
     display: none;
 }
 
-/* Proceed data button*/
+/* Proceed data REPORT button*/
 #proceed-data {
     position: relative;
     bottom: 10%;
